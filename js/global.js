@@ -37,7 +37,7 @@ $(window).resize(function() {
 });
 
 //Scroll header change 
-$('#about').waypoint(function(direction) {
+$('.intro h2:last-of-type').waypoint(function(direction) {
   if(direction == "down") {
     $('.main-nav').addClass('filled');
   } else {
