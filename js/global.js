@@ -36,6 +36,11 @@ $(window).resize(function() {
   projectContainerSize();
 });
 
+//Lazy load images
+$("img.lazy").lazyload({
+    effect: "fadeIn"
+});
+
 //Scroll header change 
 $('.intro h2:last-of-type').waypoint(function(direction) {
   if(direction == "down") {
