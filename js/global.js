@@ -15,14 +15,25 @@ $('#project-filters').on('click', 'button', function() {
 });
 
 //Set container width of projects
-var contentWidth = $('#projects .container').width();
-var containerItemSize = Math.floor(contentWidth/320);
-var resizeContainerWidth = containerItemSize * 340;
 
-$('#isotope-wrap').width(resizeContainerWidth);
+function projectContainerSize() {
+    var contentWidth = $('#projects .container').width();
+    var containerItemSize = Math.floor(contentWidth/320);
+    var resizeContainerWidth = containerItemSize * 340;
 
-$('#isotope-wrap').css({
-  marginLeft: (contentWidth - resizeContainerWidth)/2
+    $('#isotope-wrap').width(resizeContainerWidth);
+
+    $('#isotope-wrap').css({
+      marginLeft: (contentWidth - resizeContainerWidth)/2
+    });
+}
+
+//Size on load
+projectContainerSize();
+
+//Size on window resize
+$(window).resize(function() {
+  projectContainerSize();
 });
 
 //Scroll header change 
