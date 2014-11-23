@@ -14,7 +14,6 @@ $('#project-filters').on('click', 'button', function() {
   $container.isotope({ filter: filterValue });
 });
 
-
 //Set container width of projects
 var contentWidth = $('#projects .container').width();
 var containerItemSize = Math.floor(contentWidth/320);
