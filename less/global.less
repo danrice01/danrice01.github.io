@@ -68,7 +68,7 @@ header {
 .navbar-toggle {
   background-color: rgba(11, 11, 11, 0.5);
   .icon-bar {
-    background: #fff;
+    background: @light;
   }
 }
 
@@ -116,7 +116,7 @@ header {
       color: @dark;
   }
   &.code {
-      color: #fff;
+      color: @light;
       background: @dark;
   }
   &.about {
@@ -128,7 +128,7 @@ header {
 }
 
 .social-links {
-    border-radius: 10px;
+    .rounded(10px);
     padding: 10px;
     margin-top: 30px;
     display: inline-block;
@@ -136,11 +136,11 @@ header {
     h4 {
       margin: 0px;
       padding-top: 31px;
-      color: #fff;
+      color: @light;
       font-weight: 400;
     }
     span {
-      color: #fff;
+      color: @light;
       font-size: 100px;
     }
     &.github {
@@ -172,7 +172,7 @@ header {
 
 .project-wrap {
   background: #222;
-  color: #fff;
+  color: @light;
   width: 300px;
   margin: 20px;
   .rounded(5px);
@@ -271,7 +271,7 @@ header {
     color: rgba(255, 255, 255, 0.3);
   }
   a {
-    color: #fff
+    color: @light;
   }
   nav {
     a { 
@@ -283,34 +283,34 @@ header {
 .email-subscribe {
   input[type="email"] {
     background: none;
-    border: 2px solid #fff;
-    color: #fff;
+    border: 2px solid @light;
+    color: @light;
     &::-webkit-input-placeholder {
-       color: #fff;
+       color: @light;
     }
 
     &:-moz-placeholder { /* Firefox 18- */
-       color: #fff;  
+       color: @light;  
     }
 
     &::-moz-placeholder {  /* Firefox 19+ */
-       color: #fff;  
+       color: @light;  
     }
 
     &:-ms-input-placeholder {  
-       color: #fff;  
+       color: @light;  
     }
   }
   button {
     background: none;
-    color: #fff;
-    border: 2px solid #fff;
+    color: @light;
+    border: 2px solid @light;
     padding: 0px 10px;
     font-size: 21px;
     &:hover,&:focus {
-      background: #fff;
+      background: @light;
       color: @primary;
-      border-color: #fff;
+      border-color: @light;
     }
   }
 }
