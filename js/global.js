@@ -15,14 +15,20 @@ $('#project-filters').on('click', 'button', function() {
 
 function projectContainerSize() {
     var contentWidth = $('#projects .container').width();
-    var containerItemSize = Math.floor(contentWidth/320);
-    var resizeContainerWidth = containerItemSize * 340;
+    var itemWidth = $('.project-wrap').outerWidth(true);
+
+    var containerItemSize = Math.floor(contentWidth/itemWidth);
+    var resizeContainerWidth = containerItemSize * itemWidth;
+    console.log(resizeContainerWidth);
+    console.log(itemWidth);
 
     $('#isotope-wrap').width(resizeContainerWidth);
 
-    $('#isotope-wrap').css({
-      marginLeft: (contentWidth - resizeContainerWidth)/2
-    });
+    if(containerItemSize > 1) {
+        $('#isotope-wrap').css({
+          marginLeft: (contentWidth - resizeContainerWidth)/2
+        });
+    }
 }
 
 //Size on load

@@ -184,7 +184,8 @@ header {
   background: #222;
   color: @light;
   width: 300px;
-  margin: 20px;
+  margin-bottom: 20px;
+  margin-left: -5px;
   .rounded(5px);
   img {
     width: 100%;
@@ -336,7 +337,19 @@ header {
   }
 }
 
+@media (max-width:767px) {
+    .project-wrap {
+      margin: 0px auto;
+      margin-bottom: 20px;
+      position: static!important;
+    }
+}
+
 @media (min-width:768px) {
+    .project-wrap {
+      margin: 20px;
+    }
+
     .navbar-brand img {
         max-height: 64px;
     }
