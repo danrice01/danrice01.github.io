@@ -1,12 +1,9 @@
 //Project Isotope
 var $container = $('#isotope-wrap');
 // init
-$container.imagesLoaded( function(){
-  $container.isotope({
-    // options
+$container.isotope({
     itemSelector: '.project-wrap',
     layoutMode: 'masonry'
-  });
 });
 
 $('#project-filters').on('click', 'button', function() {
