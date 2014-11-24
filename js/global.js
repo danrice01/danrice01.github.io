@@ -6,6 +6,10 @@ $container.isotope({
     layoutMode: 'masonry'
 });
 
+$container.isotope('on', 'layoutComplete', function() {
+    $(window).trigger("scroll");
+});
+
 $('#project-filters').on('click', 'button', function() {
   var filterValue = $(this).attr('data-filter');
   $container.isotope({ filter: filterValue });
