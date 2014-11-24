@@ -23,8 +23,6 @@ function projectContainerSize() {
 
     var containerItemSize = Math.floor(contentWidth/itemWidth);
     var resizeContainerWidth = containerItemSize * itemWidth;
-    console.log(resizeContainerWidth);
-    console.log(itemWidth);
 
     $('#isotope-wrap').width(resizeContainerWidth);
 
